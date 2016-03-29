@@ -11,7 +11,7 @@ System.register(["angular2/core", 'angular2/router'], function(exports_1, contex
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1, router_1;
-    var SideMenu;
+    var SideMenuComponent;
     return {
         setters:[
             function (core_1_1) {
@@ -21,20 +21,20 @@ System.register(["angular2/core", 'angular2/router'], function(exports_1, contex
                 router_1 = router_1_1;
             }],
         execute: function() {
-            SideMenu = (function () {
-                function SideMenu() {
+            SideMenuComponent = (function () {
+                function SideMenuComponent() {
                 }
-                SideMenu = __decorate([
+                SideMenuComponent = __decorate([
                     core_1.Component({
                         selector: 'side-menu',
                         directives: [router_1.ROUTER_DIRECTIVES],
                         templateUrl: "./app/components/side-menu/side-menu.html"
                     }), 
                     __metadata('design:paramtypes', [])
-                ], SideMenu);
-                return SideMenu;
+                ], SideMenuComponent);
+                return SideMenuComponent;
             }());
-            exports_1("SideMenu", SideMenu);
+            exports_1("SideMenuComponent", SideMenuComponent);
         }
     }
 });

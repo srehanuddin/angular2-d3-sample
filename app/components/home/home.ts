@@ -5,7 +5,7 @@ import { Component } from "angular2/core" ;
     directives: [],
     templateUrl: "./app/components/home/home.html"
 })
-export class Home {
+export class HomeComponent {
 }
 
 

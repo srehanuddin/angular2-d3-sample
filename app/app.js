@@ -1,4 +1,4 @@
-System.register(["angular2/core", 'angular2/router', "./components/side-menu/side-menu"], function(exports_1, context_1) {
+System.register(["angular2/core", 'angular2/router', "./components/side-menu/side-menu", "./components/home/home"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(["angular2/core", 'angular2/router', "./components/side-menu/sid
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, router_1, side_menu_1;
+    var core_1, router_1, side_menu_1, home_1;
     var App;
     return {
         setters:[
@@ -22,6 +22,9 @@ System.register(["angular2/core", 'angular2/router', "./components/side-menu/sid
             },
             function (side_menu_1_1) {
                 side_menu_1 = side_menu_1_1;
+            },
+            function (home_1_1) {
+                home_1 = home_1_1;
             }],
         execute: function() {
             App = (function () {
@@ -30,10 +33,13 @@ System.register(["angular2/core", 'angular2/router', "./components/side-menu/sid
                 App = __decorate([
                     core_1.Component({
                         selector: 'app',
-                        directives: [router_1.ROUTER_DIRECTIVES, side_menu_1.SideMenu],
+                        directives: [router_1.ROUTER_DIRECTIVES, side_menu_1.SideMenuComponent],
                         templateUrl: "./app/app.html"
                     }),
-                    router_1.RouteConfig([]), 
+                    router_1.RouteConfig([
+                        { path: '/', name: 'root', redirectTo: ['/Home'] },
+                        { path: '/home', name: 'Home', component: home_1.HomeComponent, useAsDefault: true },
+                    ]), 
                     __metadata('design:paramtypes', [])
                 ], App);
                 return App;
