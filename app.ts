@@ -1,6 +1,5 @@
 import { bootstrap } from "angular2/platform/browser" ;
-import { Component } from "angular2/core" ;
-
+import { Component, Directive, Attribute, ElementRef, Inject } from "angular2/core" ;
 
 @Component({
     selector: 'app' ,
@@ -14,7 +13,11 @@ import { Component } from "angular2/core" ;
 class App {  
 
     //tasks: Observable<any[]>;
-    constructor(){
+    constructor(@Inject(ElementRef) elementRef: ElementRef){
+        
+        console.log("elementRef");
+        console.log(elementRef);
+
     } 
     
 }

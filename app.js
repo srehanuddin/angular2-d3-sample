@@ -10,6 +10,9 @@ System.register(["angular2/platform/browser", "angular2/core"], function(exports
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
+    var __param = (this && this.__param) || function (paramIndex, decorator) {
+        return function (target, key) { decorator(target, key, paramIndex); }
+    };
     var browser_1, core_1;
     var App;
     return {
@@ -23,7 +26,9 @@ System.register(["angular2/platform/browser", "angular2/core"], function(exports
         execute: function() {
             App = (function () {
                 //tasks: Observable<any[]>;
-                function App() {
+                function App(elementRef) {
+                    console.log("elementRef");
+                    console.log(elementRef);
                 }
                 App = __decorate([
                     core_1.Component({
@@ -32,8 +37,9 @@ System.register(["angular2/platform/browser", "angular2/core"], function(exports
                             class: "myClass"
                         },
                         template: "    \n        Hello D3\n    "
-                    }), 
-                    __metadata('design:paramtypes', [])
+                    }),
+                    __param(0, core_1.Inject(core_1.ElementRef)), 
+                    __metadata('design:paramtypes', [core_1.ElementRef])
                 ], App);
                 return App;
             }());
