@@ -28,20 +28,11 @@ System.register(["angular2/platform/browser", "angular2/core", 'd3'], function(e
             }],
         execute: function() {
             App = (function () {
-                //tasks: Observable<any[]>;
                 function App(elementRef) {
                     this.elementRef = elementRef;
-                    console.log("TEST");
-                    console.log(d3);
-                    d3.select(this.elementRef.nativeElement).select("h1").style("background-color", "yellow");
-                    console.log(d3.select(this.elementRef.nativeElement).select("h1"));
                 }
                 App.prototype.ngOnInit = function () {
                     console.log("ngOnInit");
-                    d3.select(this.elementRef.nativeElement).select("h1").style("background-color", "yellow");
-                };
-                App.prototype.afterViewInit = function () {
-                    console.log("afterViewInit() called");
                     d3.select(this.elementRef.nativeElement).select("h1").style("background-color", "yellow");
                 };
                 App = __decorate([
@@ -50,7 +41,7 @@ System.register(["angular2/platform/browser", "angular2/core", 'd3'], function(e
                         host: {
                             class: "myClass"
                         },
-                        template: "    \n        <h1>D3.js Integrated if background is yellow</h1>\n    "
+                        template: "\n            <h1>D3.js Integrated if background is yellow</h1>\n        "
                     }),
                     __param(0, core_1.Inject(core_1.ElementRef)), 
                     __metadata('design:paramtypes', [core_1.ElementRef])

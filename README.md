@@ -1,1 +1,1 @@
-# Angular 2 + AngularFire 2 + Typescript Sample App
+# Angular 2 + D3 + Typescript Sample App
