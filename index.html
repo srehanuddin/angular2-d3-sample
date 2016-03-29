@@ -21,6 +21,7 @@
 
     <!-- Stylesheet -->
     <link rel="stylesheet" type="text/css" href="resources/vendor/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="resources/style.css">
 
 </head>
 
@@ -44,26 +45,10 @@
         });
 System.import('app/bootstrap')
     .then(null, console.error.bind(console));
-    
-    
 
     </script>
 
-    <!-- Menu Bar -->
-    <div class="ui menu">
-        <div class="ui container">
-            <div class="header item borderless">
-                <h1 class="ui header">
-            Angular 2 - D3 Sample App
-          </h1>
-            </div>
-        </div>
-    </div>
-
-    <div class="ui main text container">
-        <app></app>
-        <!-- <--- Our app loads here! -->
-    </div>  
+    <app></app>
 
 
 </body>

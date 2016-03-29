@@ -10,9 +10,6 @@ System.register(["angular2/core", 'd3'], function(exports_1, context_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var __param = (this && this.__param) || function (paramIndex, decorator) {
-        return function (target, key) { decorator(target, key, paramIndex); }
-    };
     var core_1, d3;
     var App;
     return {
@@ -39,8 +36,7 @@ System.register(["angular2/core", 'd3'], function(exports_1, context_1) {
                             class: "myClass"
                         },
                         template: "\n            <h1>D3.js Integrated if background is yellow</h1>\n        "
-                    }),
-                    __param(0, core_1.Inject(core_1.ElementRef)), 
+                    }), 
                     __metadata('design:paramtypes', [core_1.ElementRef])
                 ], App);
                 return App;

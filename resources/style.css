@@ -1,0 +1,28 @@
+.center {
+    text-align: center;
+}
+
+.article {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    overflow: auto;
+    min-width: 0px;
+    
+}
+
+.toc.bg {
+    position: fixed;
+    z-index: -1;
+    background-color: #1b1c1d;
+    width: 250px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.marginLeft {
+    margin-left: 30px;
+}
