@@ -6,12 +6,7 @@ import { ROUTER_DIRECTIVES, RouteConfig } from 'angular2/router';
     directives: [ROUTER_DIRECTIVES],
     templateUrl: "./app/components/side-menu/side-menu.html"
 })
-export class SideMenu { 
-
-    constructor(){
-
-    } 
-    
+export class SideMenu {
 }
 
 

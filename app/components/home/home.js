@@ -1,4 +1,4 @@
-System.register(["angular2/core", 'angular2/router'], function(exports_1, context_1) {
+System.register(["angular2/core"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,32 +10,29 @@ System.register(["angular2/core", 'angular2/router'], function(exports_1, contex
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, router_1;
-    var SideMenu;
+    var core_1;
+    var Home;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
-            },
-            function (router_1_1) {
-                router_1 = router_1_1;
             }],
         execute: function() {
-            SideMenu = (function () {
-                function SideMenu() {
+            Home = (function () {
+                function Home() {
                 }
-                SideMenu = __decorate([
+                Home = __decorate([
                     core_1.Component({
-                        selector: 'side-menu',
-                        directives: [router_1.ROUTER_DIRECTIVES],
-                        templateUrl: "./side-menu/side-menu.html"
+                        selector: 'home',
+                        directives: [],
+                        templateUrl: "./app/components/home/home.html"
                     }), 
                     __metadata('design:paramtypes', [])
-                ], SideMenu);
-                return SideMenu;
+                ], Home);
+                return Home;
             }());
-            exports_1("SideMenu", SideMenu);
+            exports_1("Home", Home);
         }
     }
 });
-//# sourceMappingURL=sidemenu.js.map
+//# sourceMappingURL=home.js.map
