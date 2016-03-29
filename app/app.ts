@@ -1,9 +1,11 @@
 import { Component } from "angular2/core" ;
 import { ROUTER_DIRECTIVES, RouteConfig } from 'angular2/router';
 
+import {SideMenu} from "./components/side-menu/side-menu"
+
 @Component({
     selector: 'app',
-    directives: [ROUTER_DIRECTIVES],
+    directives: [ROUTER_DIRECTIVES, SideMenu],
     templateUrl: "./app/app.html"
 })
 @RouteConfig([

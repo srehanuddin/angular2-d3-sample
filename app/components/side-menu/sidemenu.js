@@ -1,4 +1,4 @@
-System.register(["angular2/core", 'angular2/router', "./components/side-menu/side-menu"], function(exports_1, context_1) {
+System.register(["angular2/core", 'angular2/router'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,8 +10,8 @@ System.register(["angular2/core", 'angular2/router', "./components/side-menu/sid
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, router_1, side_menu_1;
-    var App;
+    var core_1, router_1;
+    var SideMenu;
     return {
         setters:[
             function (core_1_1) {
@@ -19,27 +19,23 @@ System.register(["angular2/core", 'angular2/router', "./components/side-menu/sid
             },
             function (router_1_1) {
                 router_1 = router_1_1;
-            },
-            function (side_menu_1_1) {
-                side_menu_1 = side_menu_1_1;
             }],
         execute: function() {
-            App = (function () {
-                function App() {
+            SideMenu = (function () {
+                function SideMenu() {
                 }
-                App = __decorate([
+                SideMenu = __decorate([
                     core_1.Component({
-                        selector: 'app',
-                        directives: [router_1.ROUTER_DIRECTIVES, side_menu_1.SideMenu],
-                        templateUrl: "./app/app.html"
-                    }),
-                    router_1.RouteConfig([]), 
+                        selector: 'side-menu',
+                        directives: [router_1.ROUTER_DIRECTIVES],
+                        templateUrl: "./side-menu/side-menu.html"
+                    }), 
                     __metadata('design:paramtypes', [])
-                ], App);
-                return App;
+                ], SideMenu);
+                return SideMenu;
             }());
-            exports_1("App", App);
+            exports_1("SideMenu", SideMenu);
         }
     }
 });
-//# sourceMappingURL=app.js.map
+//# sourceMappingURL=sidemenu.js.map
