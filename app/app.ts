@@ -1,4 +1,3 @@
-import { bootstrap } from "angular2/platform/browser" ;
 import { Component, Directive, Attribute, ElementRef, Inject } from "angular2/core" ;
 import * as d3 from 'd3';
 
@@ -12,7 +11,7 @@ import * as d3 from 'd3';
             <h1>D3.js Integrated if background is yellow</h1>
         `
 })
-class App { 
+export class App { 
 
     constructor(@Inject(ElementRef) public elementRef: ElementRef){
 
@@ -22,10 +21,7 @@ class App {
         console.log("ngOnInit")
         d3.select(this.elementRef.nativeElement).select("h1").style("background-color", "yellow");
     }
-    
-    
+       
 }
 
-bootstrap(App, [
-]);
 

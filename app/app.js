@@ -1,4 +1,4 @@
-System.register(["angular2/platform/browser", "angular2/core", 'd3'], function(exports_1, context_1) {
+System.register(["angular2/core", 'd3'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -13,13 +13,10 @@ System.register(["angular2/platform/browser", "angular2/core", 'd3'], function(e
     var __param = (this && this.__param) || function (paramIndex, decorator) {
         return function (target, key) { decorator(target, key, paramIndex); }
     };
-    var browser_1, core_1, d3;
+    var core_1, d3;
     var App;
     return {
         setters:[
-            function (browser_1_1) {
-                browser_1 = browser_1_1;
-            },
             function (core_1_1) {
                 core_1 = core_1_1;
             },
@@ -48,7 +45,7 @@ System.register(["angular2/platform/browser", "angular2/core", 'd3'], function(e
                 ], App);
                 return App;
             }());
-            browser_1.bootstrap(App, []);
+            exports_1("App", App);
         }
     }
 });
