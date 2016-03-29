@@ -19,6 +19,8 @@
     </script>
     <script src="node_modules/angular2/bundles/angular2.dev.js">    </script>
     <script src="node_modules/angular2/bundles/http.dev.js">    </script>
+    
+    <script src="node_modules/d3/d3.js">    </script>
 
 
     <!-- Stylesheet -->
@@ -30,6 +32,9 @@
 
     <script>
         System.config({
+            map: {
+                d3: 'node_modules/d3/d3.js',
+            },
             packages: {
                 app: {
                     format: 'register',
