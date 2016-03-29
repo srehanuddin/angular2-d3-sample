@@ -1,4 +1,4 @@
-System.register(["angular2/core", 'angular2/router'], function(exports_1, context_1) {
+System.register(["angular2/core", 'd3'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,28 +10,31 @@ System.register(["angular2/core", 'angular2/router'], function(exports_1, contex
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, router_1;
+    var core_1, d3;
     var App;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             },
-            function (router_1_1) {
-                router_1 = router_1_1;
+            function (d3_1) {
+                d3 = d3_1;
             }],
         execute: function() {
             App = (function () {
-                function App() {
+                function App(elementRef) {
+                    this.elementRef = elementRef;
                 }
+                App.prototype.ngOnInit = function () {
+                    console.log("ngOnInit");
+                    d3.select(this.elementRef.nativeElement).select("h1").style("background-color", "yellow");
+                };
                 App = __decorate([
                     core_1.Component({
                         selector: 'app',
-                        directives: [router_1.ROUTER_DIRECTIVES],
-                        templateUrl: "./app/app.html"
-                    }),
-                    router_1.RouteConfig([]), 
-                    __metadata('design:paramtypes', [])
+                        template: "\n        <h1>D3.js Integrated if background is yellow</h1>\n    "
+                    }), 
+                    __metadata('design:paramtypes', [core_1.ElementRef])
                 ], App);
                 return App;
             }());
@@ -39,4 +42,4 @@ System.register(["angular2/core", 'angular2/router'], function(exports_1, contex
         }
     }
 });
-//# sourceMappingURL=app.js.map
+//# sourceMappingURL=app.1.js.map
