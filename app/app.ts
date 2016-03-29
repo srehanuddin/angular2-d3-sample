@@ -14,8 +14,7 @@ import {D3IntegrationCheckComponent} from "./components/d3-integration-check/d3-
   { path: '/', name: 'root', redirectTo: ['/Home'] },
   { path: '/home', name: 'Home', component: HomeComponent, useAsDefault : true },
   { path: '/D3IntegrationCheck', name: 'D3IntegrationCheck', component: D3IntegrationCheckComponent },
-  //{ path: '/contact/...', name: 'Contact', component: ContactComponent },
-  //{ path: '/contactus', name: 'ContactUs', redirectTo: ['/Contact'] },
+  { path: '**', redirectTo: ['/Home'] }
 ])
 export class App { 
 

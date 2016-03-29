@@ -1,4 +1,4 @@
-import { provide, Component, Directive, Attribute, ElementRef, Inject } from "angular2/core" ;
+import { provide, Component, Directive, Attribute, ElementRef } from "angular2/core" ;
 import * as d3 from 'd3';
 
 

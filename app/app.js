@@ -43,6 +43,7 @@ System.register(["angular2/core", 'angular2/router', "./components/side-menu/sid
                         { path: '/', name: 'root', redirectTo: ['/Home'] },
                         { path: '/home', name: 'Home', component: home_1.HomeComponent, useAsDefault: true },
                         { path: '/D3IntegrationCheck', name: 'D3IntegrationCheck', component: d3_integration_check_1.D3IntegrationCheckComponent },
+                        { path: '**', redirectTo: ['/Home'] }
                     ]), 
                     __metadata('design:paramtypes', [])
                 ], App);
