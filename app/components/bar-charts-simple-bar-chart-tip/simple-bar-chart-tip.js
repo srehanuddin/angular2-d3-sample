@@ -11,7 +11,7 @@ System.register(["angular2/core", 'd3'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1, d3;
-    var SimpleBarChartComponent;
+    var SimpleBarChartTipComponent;
     return {
         setters:[
             function (core_1_1) {
@@ -21,14 +21,11 @@ System.register(["angular2/core", 'd3'], function(exports_1, context_1) {
                 d3 = d3_1;
             }],
         execute: function() {
-            SimpleBarChartComponent = (function () {
-                function SimpleBarChartComponent(elementRef) {
+            SimpleBarChartTipComponent = (function () {
+                function SimpleBarChartTipComponent(elementRef) {
                     this.elementRef = elementRef;
                 }
-                SimpleBarChartComponent.prototype.ngOnInit = function () {
-                    var el = this.elementRef.nativeElement;
-                    var attrName = el.children && el.children[0] && el.children[0].attributes && el.children[0].attributes[0] && el.children[0].attributes[0].name;
-                    var componentContainer = d3.select(this.elementRef.nativeElement);
+                SimpleBarChartTipComponent.prototype.ngOnInit = function () {
                     var margin = { top: 20, right: 20, bottom: 30, left: 40 }, width = 960 - margin.left - margin.right, height = 500 - margin.top - margin.bottom;
                     var x = d3.scale.ordinal()
                         .rangeRoundBands([0, width], .1);
@@ -41,13 +38,11 @@ System.register(["angular2/core", 'd3'], function(exports_1, context_1) {
                         .scale(y)
                         .orient("left")
                         .ticks(10, "%");
-                    var svg = componentContainer.select("#display")
-                        .append("svg")
+                    var componentContainer = d3.select(this.elementRef.nativeElement);
+                    var svg = componentContainer.select("#display").append("svg")
                         .attr("width", width + margin.left + margin.right)
                         .attr("height", height + margin.top + margin.bottom)
-                        .attr(attrName, "")
                         .append("g")
-                        .attr(attrName, "")
                         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
                     d3.tsv("app/components/bar-charts-simple-bar-chart/data.tsv", type, function (error, data) {
                         if (error)
@@ -55,16 +50,13 @@ System.register(["angular2/core", 'd3'], function(exports_1, context_1) {
                         x.domain(data.map(function (d) { return d.letter; }));
                         y.domain([0, d3.max(data, function (d) { return d.frequency; })]);
                         svg.append("g")
-                            .attr(attrName, "")
                             .attr("class", "x axis")
                             .attr("transform", "translate(0," + height + ")")
                             .call(xAxis);
                         svg.append("g")
-                            .attr(attrName, "")
                             .attr("class", "y axis")
                             .call(yAxis)
                             .append("text")
-                            .attr(attrName, "")
                             .attr("transform", "rotate(-90)")
                             .attr("y", 6)
                             .attr("dy", ".71em")
@@ -73,7 +65,6 @@ System.register(["angular2/core", 'd3'], function(exports_1, context_1) {
                         svg.selectAll(".bar")
                             .data(data)
                             .enter().append("rect")
-                            .attr(attrName, "")
                             .attr("class", "bar")
                             .attr("x", function (d) { return x(d.letter); })
                             .attr("width", x.rangeBand())
@@ -85,21 +76,18 @@ System.register(["angular2/core", 'd3'], function(exports_1, context_1) {
                         return d;
                     }
                 };
-                SimpleBarChartComponent = __decorate([
+                SimpleBarChartTipComponent = __decorate([
                     core_1.Component({
-                        selector: 'simple-bar-chart',
+                        selector: 'simple-bar-chart-tip',
                         directives: [],
-                        styleUrls: ["./app/components/bar-charts-simple-bar-chart/style.css"],
-                        //styles : [":host >>> .bar { fill: steelblue;}"],
-                        //encapsulation: ViewEncapsulation.None,
-                        templateUrl: "./app/components/bar-charts-simple-bar-chart/simple-bar-chart.html"
+                        templateUrl: "./app/components/bar-charts-simple-bar-chart-tip/simple-bar-chart-tip.html"
                     }), 
                     __metadata('design:paramtypes', [core_1.ElementRef])
-                ], SimpleBarChartComponent);
-                return SimpleBarChartComponent;
+                ], SimpleBarChartTipComponent);
+                return SimpleBarChartTipComponent;
             }());
-            exports_1("SimpleBarChartComponent", SimpleBarChartComponent);
+            exports_1("SimpleBarChartTipComponent", SimpleBarChartTipComponent);
         }
     }
 });
-//# sourceMappingURL=simple-bar-chart.js.map
+//# sourceMappingURL=simple-bar-chart-tip.js.map
