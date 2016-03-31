@@ -1,4 +1,4 @@
-System.register(["angular2/core", 'angular2/router', "./components/side-menu/side-menu", "./components/home/home", "./components/d3-integration-check/d3-integration-check", "./components/bar-charts-simple-bar-chart/simple-bar-chart", "./components/bar-charts-stacked-bar-chart/component", "./components/bar-charts-simple-bar-chart-tip/simple-bar-chart-tip"], function(exports_1, context_1) {
+System.register(["angular2/core", 'angular2/router', "./components/side-menu/side-menu", "./components/home/home", "./components/d3-integration-check/d3-integration-check", "./components/bar-charts-simple-bar-chart/simple-bar-chart", "./components/bar-charts-stacked-bar-chart/component", "./components/bar-charts-hierarchical-bar-chart/component"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(["angular2/core", 'angular2/router', "./components/side-menu/sid
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, router_1, side_menu_1, home_1, d3_integration_check_1, simple_bar_chart_1, component_1, simple_bar_chart_tip_1;
+    var core_1, router_1, side_menu_1, home_1, d3_integration_check_1, simple_bar_chart_1, component_1, component_2;
     var App;
     return {
         setters:[
@@ -35,8 +35,8 @@ System.register(["angular2/core", 'angular2/router', "./components/side-menu/sid
             function (component_1_1) {
                 component_1 = component_1_1;
             },
-            function (simple_bar_chart_tip_1_1) {
-                simple_bar_chart_tip_1 = simple_bar_chart_tip_1_1;
+            function (component_2_1) {
+                component_2 = component_2_1;
             }],
         execute: function() {
             App = (function () {
@@ -54,7 +54,7 @@ System.register(["angular2/core", 'angular2/router', "./components/side-menu/sid
                         { path: '/D3IntegrationCheck', name: 'D3IntegrationCheck', component: d3_integration_check_1.D3IntegrationCheckComponent },
                         { path: '/SimpleBarChart', name: 'SimpleBarChart', component: simple_bar_chart_1.SimpleBarChartComponent },
                         { path: '/StackedBarChart', name: 'StackedBarChart', component: component_1.StackedBarChartComponent },
-                        { path: '/SimpleBarChartWithTip', name: 'SimpleBarChartWithTip', component: simple_bar_chart_tip_1.SimpleBarChartTipComponent },
+                        { path: '/HierarchicalBarChart', name: 'HierarchicalBarChart', component: component_2.HierarchicalBarChartComponent },
                         { path: '**', redirectTo: ['/Home'] }
                     ]), 
                     __metadata('design:paramtypes', [])

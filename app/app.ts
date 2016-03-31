@@ -6,7 +6,7 @@ import {HomeComponent} from "./components/home/home"
 import {D3IntegrationCheckComponent} from "./components/d3-integration-check/d3-integration-check"
 import {SimpleBarChartComponent} from "./components/bar-charts-simple-bar-chart/simple-bar-chart"
 import {StackedBarChartComponent} from "./components/bar-charts-stacked-bar-chart/component"
-import {SimpleBarChartTipComponent} from "./components/bar-charts-simple-bar-chart-tip/simple-bar-chart-tip"
+import {HierarchicalBarChartComponent} from "./components/bar-charts-hierarchical-bar-chart/component"
 
 @Component({
     selector: 'app',
@@ -19,7 +19,7 @@ import {SimpleBarChartTipComponent} from "./components/bar-charts-simple-bar-cha
   { path: '/D3IntegrationCheck', name: 'D3IntegrationCheck', component: D3IntegrationCheckComponent },
   { path: '/SimpleBarChart', name: 'SimpleBarChart', component: SimpleBarChartComponent },
   { path: '/StackedBarChart', name: 'StackedBarChart', component: StackedBarChartComponent },
-  { path: '/SimpleBarChartWithTip', name: 'SimpleBarChartWithTip', component: SimpleBarChartTipComponent },
+  { path: '/HierarchicalBarChart', name: 'HierarchicalBarChart', component: HierarchicalBarChartComponent },
   { path: '**', redirectTo: ['/Home'] }
 ])
 export class App { 
