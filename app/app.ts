@@ -7,6 +7,8 @@ import {D3IntegrationCheckComponent} from "./components/d3-integration-check/d3-
 import {SimpleBarChartComponent} from "./components/bar-charts-simple-bar-chart/simple-bar-chart"
 import {StackedBarChartComponent} from "./components/bar-charts-stacked-bar-chart/component"
 import {HierarchicalBarChartComponent} from "./components/bar-charts-hierarchical-bar-chart/component"
+import {GroupedBarChartComponent} from "./components/bar-charts-grouped-bar-chart/component"
+import {WaterfallBarChartComponent} from "./components/bar-charts-waterfall-bar-chart/component"
 
 @Component({
     selector: 'app',
@@ -20,6 +22,8 @@ import {HierarchicalBarChartComponent} from "./components/bar-charts-hierarchica
   { path: '/SimpleBarChart', name: 'SimpleBarChart', component: SimpleBarChartComponent },
   { path: '/StackedBarChart', name: 'StackedBarChart', component: StackedBarChartComponent },
   { path: '/HierarchicalBarChart', name: 'HierarchicalBarChart', component: HierarchicalBarChartComponent },
+  { path: '/GroupedBarChart', name: 'GroupedBarChart', component: GroupedBarChartComponent },
+  { path: '/WaterfallBarChart', name: 'WaterfallBarChart', component: WaterfallBarChartComponent },
   { path: '**', redirectTo: ['/Home'] }
 ])
 export class App { 
